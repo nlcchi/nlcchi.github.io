@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chi's e-commerce website</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: pink;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .search-bar {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .header-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .header-buttons button {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .header-buttons img {
+    max-width: 20px;
+    height: auto;
+    margin-right: 5px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    width: 300px;
+  }
+
+  .product-card img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .slider-container {
+    text-align: center; /* Center the slider */
+    width: 100%;
+  }
+  
+  .slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slider-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    flex-shrink: 0;
+    width: 100%;
+  }
+
+  .slide img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1> ♡ ShopLumi ♡ </h1>
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <button class="search-button">Search</button>
+    </div>
+    <div class="header-buttons">
+      <button><img src="home.png" alt="Home"> Home</button>
+      <button><img src="cart.png" alt="Cart"> Shopping Cart</button>
+      <button><img src="profile.png" alt="Profile"> Profile</button>
+    </div>
+  </header>
+  <div class="container">
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slider-inner">
+          <div class="slide">
+            <img src="slider1.jpg" alt="Slider 1">
+          </div>
+          <div class="slide">
+            <img src="slider2.jpg" alt="Slider 2">
+          </div>
+          <!-- Add more slides here -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="product-card">
+      <img src="product1.jpg" alt="Product 1">
+      <h2>Princess Sophie</h2>
+      <p><b>$0.02</b> (can argue for lower price) <br> <u>Pros:</u> <br> + Filipino <br> + Dances [Prof if you see this, she'll dance for class part]
+        <br> <u>Cons:</u> <br> - Her personality <br> - Mean
+      </p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="product2.jpg" alt="Product 2">
+      <h2>Chi</h2>
+      <p><b>$priceless</b> <br> <u>Pros:</u> <br> + Pretty <br> + Funny <br> + Amazing personality <br> + Photoshop skills 
+        <br> <u>Cons:</u> <br> - nil -</p>
+      <button>Add to Cart</button>
+    </div>
+    <!-- Add more product cards here -->
+  </div>
+  <script>
+    const sliderInner = document.querySelector(".slider-inner");
+    let slideIndex = 0;
+
+    function showSlide(index) {
+      sliderInner.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function nextSlide() {
+      slideIndex = (slideIndex + 1) % sliderInner.children.length;
+      showSlide(slideIndex);
+    }
+
+    setInterval(nextSlide, 3000); // Change slide every 3 seconds
+  </script>
+</body>
+</html>
