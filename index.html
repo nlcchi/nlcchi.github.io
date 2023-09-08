@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chi Nguyen - Resume</title>
+
+  <!-- bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -45,7 +48,7 @@
       max-width: 100%;
       height: auto;
     }
-
+    
     a {
       color: rgb(161, 160, 160);
     }
@@ -55,57 +58,73 @@
     a:visited {
       color: rgb(161, 160, 160);
     }
-
+    
     ul, li {
       margin: 0px;
     }
-  </style>
+    </style>
 </head>
 <body>
-    <div class="central-image">
-      <img src="product2.jpg" alt="Central Image" width="200">
-    </div>
-    <div class="resume">
+  <div class="central-image">
+    <img src="./index_img/IMG_1291.PNG" alt="Central Image" width="200">
+  </div>
+  <div class="resume">
     <h1>Chi Nguyen</h1>
     <p>Email: lccnguyen.2022@scis.smu.edu.sg</p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/nguyen-le-cam-chi/">My profile</a> </p>
     
     <div class="section">
       <h2>Education</h2>
-      <h3>Singapore Management University</h3>
-      <p>Year 2 undergraduate majoring in Information Systems (Bachelor of Science)</p>
-      <h3>Tampines Meridian Junior Colledge </h3>
-      <p>Year of study: 2020 - 2021.</p>
-      <p style="text-decoration: underline;">Achievements:
-        <ul>
-          <li>
-            Silver Book Prize (Top 10%)
-          </li>
-          <li> 
-            Co-Started GiveGratitudeTM
-            <p>A VIA project aimed to show gratitude to staff of TMJC for their work during the COVID-19 Pandemic.</p>
-          </li>
-          <li>
-            Represented college for SYF in 2 catergories, achieving Prize of Accomplishment for both.
-            <p>
+      <div>
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-uni-tab" data-bs-toggle="tab" data-bs-target="#nav-uni" type="button" role="tab" aria-controls="nav-uni" aria-selected="true">University</button>
+            
+            <button class="nav-link" id="nav-jc-tab" data-bs-toggle="tab" data-bs-target="#nav-jc" type="button" role="tab" aria-controls="nav-jc" aria-selected="true">Junior College</button>
+          </div>
+        </nav>
+        <div class="tab-content m-3" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-uni" role="tabpanel" aria-labelledby="nav-uni-tab" tabindex="0">
+            <h3>Singapore Management University</h3>
+            <p>Year 2 undergraduate majoring in Information Systems (Bachelor of Science)</p>
+          </div>
+
+          <div class="tab-pane fade show" id="nav-jc" role="tabpanel" aria-labelledby="nav-jc-tab" tabindex="0">
+            <h3>Tampines Meridian Junior Colledge </h3>
+            <p>Year of study: 2020 - 2021.</p>
+            <p style="text-decoration: underline;">Achievements:
               <ul>
                 <li>
-                  Symphonic Band
+                  Silver Book Prize (Top 10%)
+                </li>
+                <li> 
+                  Co-Started GiveGratitudeTM
+                  <p>A VIA project aimed to show gratitude to staff of TMJC for their work during the COVID-19 Pandemic.</p>
                 </li>
                 <li>
-                  Percussion Emsemble
+                  Represented college for SYF in 2 catergories, achieving Prize of Accomplishment for both.
+                  <p>
+                    <ul>
+                      <li>
+                        Symphonic Band
+                      </li>
+                      <li>
+                        Percussion Emsemble
+                      </li>
+                    </ul>
+                  </p>
+                </li>
+                <li>
+                  Actively participated in class' VIA project
+                  <p>
+                    Project aimed to empower caregivers of special need individuals.
+                  </p>
                 </li>
               </ul>
             </p>
-          </li>
-          <li>
-            Actively participated in class' VIA project
-            <p>
-              Project aimed to empower caregivers of special need individuals.
-            </p>
-          </li>
-        </ul>
-      </p>
+          </div>
+        </div>
+      </div>
     </div>
     
     <div class="section">
@@ -117,7 +136,7 @@
     
     <div class="section">
       <h2>Skills</h2>
-      <p>Python, HTML, CSS, PHP</p>
+      <p>Python, HTML, CSS, PHP, JavaScript</p>
     </div>
     
     <div class="section">
@@ -125,5 +144,8 @@
       <p>I aspire to be a software engineer working on socially relevant mobile and web applications. I am open to remote internship or part-time work opportunities at the moment.</p>
     </div>
   </div>
+
+  <!-- bootstrap JavaS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>
